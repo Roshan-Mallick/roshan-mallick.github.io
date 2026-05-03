@@ -1,8 +1,102 @@
-
 body{
-    background-color: black;
-    color: rgb(132, 144, 132);
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: #0d1b1e;
+
+    /* Grid Effect */
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
     font-family: 'Inter', sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
+}
+
+.container{
+    justify-content: center;
+    text-align: center;
+}
+
+#userName{
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: bold;
+
+    /* Glow Effect */
+    text-shadow:
+        0 0 5px #103b3e,
+        0 0 10px #103b3e,
+        0 0 20px #103b3e,
+        0 0 40px #103b3e;
+
+        margin-bottom: 40px;
+}
+
+.terminalBox{
+    width: 700px;
+
+    background: rgba(15,20,25,0.9);
+
+    border-left: 3px solid #00d9ff;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    box-shadow: 0 0 20px rgba(0,217,255,0.1);
+
+}
+
+.whoami{
+    color: #00d9ff;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+}
+
+.description{
+    color: #c7c7c7;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+.cursor{
+    width: 10px;
+    height: 20px;
+
+    background: #00d9ff;
+
+    margin-top: 20px;
+
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
