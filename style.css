@@ -634,3 +634,97 @@ footer a:hover { color: var(--text-2); }
   /* hide scroll indicator on mobile */
   .hero-scroll { display: none; }
 }
+
+/* ══════════════════════════════════════
+   GITHUB ACTIVITY
+   ══════════════════════════════════════ */
+
+#github-activity {
+  padding-top: 7rem;
+}
+
+
+/* ── Header ── */
+.github-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.github-profile-link {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  color: var(--text-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-2);
+  padding-bottom: .15rem;
+  transition: all .2s ease;
+}
+
+.github-profile-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+
+/* ══════════════════════════════════════
+   STREAK CARD
+   ══════════════════════════════════════ */
+
+.github-stats-wrapper {
+  margin-bottom: 2rem;
+}
+
+.github-streak-card {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0d1117;
+}
+
+
+/* ══════════════════════════════════════
+   CONTRIBUTION GRAPH
+   ══════════════════════════════════════ */
+
+.github-graph {
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+/* style the contribution graph image for better contrast and visibility on the dark background */
+.github-graph-img {
+  width: 100%;
+  min-width: 720px;
+  display: block;
+
+  opacity: .92;
+
+  filter:
+    brightness(.72)
+    contrast(1.18)
+    saturate(1.25);
+}
+
+/* ══════════════════════════════════════
+   MOBILE
+   ══════════════════════════════════════ */
+
+@media (max-width: 700px) {
+
+  .github-head {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .github-graph {
+    padding: 1rem;
+  }
+
+}
