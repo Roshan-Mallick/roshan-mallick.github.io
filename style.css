@@ -244,7 +244,7 @@ h2.section-title {
    ══════════════════════════════════════ */
 
 #hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding: 0;
@@ -278,19 +278,39 @@ h2.section-title {
 .hero-inner {
   position: relative;
   z-index: 1;
-  width: 100%;
-  max-width: 1200px;
+
+  width: min(100%, 1440px);
   margin: 0 auto;
-  padding: 0 3rem;
+
+  padding-inline: clamp(1rem, 4vw, 3rem);
   padding-top: 80px;
+  padding-bottom: 5rem;
+
   display: grid;
-  grid-template-columns: 1fr 460px;
-  gap: 5rem;
-  align-items: center;
-  min-height: 100vh;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: stretch;
+  align-content: start;
 }
 
-.hero-left { display: flex; flex-direction: column; }
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-desc {
+  max-width: 680px;
+}
+
+.hero-terminal {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
 
 .hero-badge {
   display: inline-flex;
@@ -380,6 +400,8 @@ h1.hero-name::after {
   position: relative;
 }
 
+
+
 /* Subtle glow behind terminal */
 .hero-terminal::before {
   content: '';
@@ -415,6 +437,7 @@ h1.hero-name::after {
 }
 
 .terminal-body {
+  flex: 1;
   padding: 1.5rem 1.5rem 1.75rem;
   font-family: var(--font-mono);
   font-size: .8rem;
@@ -1049,9 +1072,52 @@ footer a:hover { color: var(--text-2); }
    RESPONSIVE
    ══════════════════════════════════════ */
 
+@media (max-width: 1400px) {
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+
+  .hero-left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .hero-terminal {
+    align-self: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-terminal {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  h1.hero-name::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-terminal { max-width: 500px; }
+  .hero-terminal {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
   #about .about-split { grid-template-columns: 1fr; gap: 3rem; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .project-card { grid-template-columns: 1fr; gap: 1rem; }
@@ -1064,8 +1130,13 @@ footer a:hover { color: var(--text-2); }
   .nav-links { display: none; }
   .container { padding: 0 1.25rem; }
   section { padding: 5rem 0; }
-  .hero-inner { padding: 0 1.25rem; padding-top: 80px; }
-  .hero-terminal { margin-bottom: 2rem; }
+  .hero-inner {
+    padding-inline: 1.25rem;
+    padding-top: 80px;
+    padding-bottom: 3rem;
+    gap: 2rem;
+  }
+  .hero-terminal { margin-bottom: 0; }
   #hero { padding-bottom: 4rem; }
   .skills-grid { grid-template-columns: 1fr; border-radius: 12px; }
   .about-sidebar { flex-direction: row; flex-wrap: wrap; }
