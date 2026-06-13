@@ -122,26 +122,7 @@
         <span class="terminal-dot green"></span>
         <span class="terminal-filename">portfolio.c</span>
       </div>
-      <div class="terminal-body">
-        <div><span class="t-comment">#include &lt;stdio.h&gt;</span></div>
-        <div>&nbsp;</div>
-        <div><span class="t-keyword">typedef struct</span> <span class="t-plain">{</span></div>
-        <div>&nbsp;&nbsp;<span class="t-plain">char</span> <span class="t-dim">*name;</span></div>
-        <div>&nbsp;&nbsp;<span class="t-plain">char</span> <span class="t-dim">*role;</span></div>
-        <div>&nbsp;&nbsp;<span class="t-plain">char</span> <span class="t-dim">*location;</span></div>
-        <div>&nbsp;&nbsp;<span class="t-plain">int</span>&nbsp;&nbsp;<span class="t-dim">open_to_work;</span></div>
-        <div><span class="t-keyword">} Developer;</span></div>
-        <div>&nbsp;</div>
-        <div><span class="t-fn">int</span> <span class="t-keyword">main</span><span class="t-plain">() {</span></div>
-        <div>&nbsp;&nbsp;<span class="t-plain">Developer rm</span> <span class="t-dim">= {</span></div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-string">"Roshan Mallick"</span><span class="t-dim">,</span></div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-string">"CSE Student"</span><span class="t-dim">,</span></div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-string">"Kolkata, IN"</span><span class="t-dim">,</span></div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-fn">1</span> <span class="t-comment">// available</span></div>
-        <div>&nbsp;&nbsp;<span class="t-dim">};</span></div>
-        <div>&nbsp;&nbsp;<span class="t-keyword">return</span> <span class="t-fn">0</span><span class="t-plain">;</span></div>
-        <div><span class="t-plain">}</span></div>
-      </div>
+      <div class="terminal-body" id="terminal-output"></div>
     </div>
 
   </div>
@@ -210,9 +191,40 @@
     </div>
     <div class="projects-list fade-in">
 
-      <a class="project-card" href="https://github.com/Roshan-Mallick/RentDB" target="_blank">
+      <div class="project-card" onclick="if(!event.target.closest('.project-link'))window.open('https://quickcheck-web.vercel.app/','_blank')" onkeydown="if(event.key==='Enter')window.open('https://quickcheck-web.vercel.app/','_blank')" role="link" tabindex="0">
         <div class="project-left">
           <span class="project-number">001</span>
+          <div class="project-status live">live</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">QuickCheck — Persistent Checklists for Engineering Teams</div>
+          <p class="project-desc">A full-stack SaaS platform that helps engineering teams manage deployments, incident response workflows, and operational runbooks through persistent, trackable checklists.</p>
+          <div class="project-highlights">
+            <span class="highlight">Auth & user mgmt</span>
+            <span class="highlight">Team collaboration</span>
+            <span class="highlight">Real-time sync</span>
+            <span class="highlight">Markdown support</span>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">GitHub</span>
+            <span class="project-tag">Brevo</span>
+            <span class="project-tag">Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://quickcheck-web.vercel.app/" target="_blank" class="project-link">Live Demo ↗</a>
+            <a href="https://github.com/Roshan-Mallick/quickcheck-web" target="_blank" class="project-link">GitHub ↗</a>
+          </div>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+      <a class="project-card" href="https://github.com/Roshan-Mallick/RentDB" target="_blank">
+        <div class="project-left">
+          <span class="project-number">002</span>
           <div class="project-status live">live</div>
         </div>
         <div class="project-body">
@@ -237,7 +249,7 @@
 
       <a class="project-card" href="https://github.com/Roshan-Mallick/hashvault" target="_blank">
            <div class="project-left">
-              <span class="project-number">002</span>
+              <span class="project-number">003</span>
             <div class="project-status live">live</div>
           </div>
                   <div class="project-body">
@@ -292,7 +304,7 @@
   </div>
 </section>
 
-<!-- ═══ SKILLS — 4-COLUMN GRID ═══ -->
+<!-- ═══ SKILLS — 3-CARD LAYOUT ═══ -->
 <section id="skills">
   <div class="container">
     <div class="fade-in">
@@ -302,81 +314,105 @@
     </div>
     <div class="skills-grid fade-in">
 
-      <!-- Languages -->
-      <div class="skill-group">
-        <div class="skill-group-name">Languages</div>
-        <div class="skill-list">
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/languages/c.png" alt="C"></div>C
+      <div class="skill-card">
+        <div class="skill-card-title">Languages</div>
+        <div class="skill-card-items">
+          <div class="skill-item">
+            <img src="assets/icons/c.svg" alt="C">
+            <span>C</span>
           </div>
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/languages/html5.svg" alt="HTML5"></div>HTML
+          <div class="skill-item">
+            <img src="assets/icons/html5.svg" alt="HTML5">
+            <span>HTML</span>
           </div>
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/languages/css.svg" alt="CSS3"></div>CSS
+          <div class="skill-item">
+            <img src="assets/icons/css3.svg" alt="CSS3">
+            <span>CSS</span>
           </div>
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/languages/js.png" alt="JavaScript"></div>JavaScript
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools & Editors -->
-      <div class="skill-group">
-        <div class="skill-group-name">Tools & Editors</div>
-        <div class="skill-list">
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/tools_and_editors/git.svg" alt="Git"></div>Git
-          </div>
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/tools_and_editors/gh-logo.png" alt="GitHub"></div>GitHub
-          </div>
-          <div class="skill-item mid">
-            <div class="skill-icon"><img src="assets/tools_and_editors/vs_code.png" alt="VS Code"></div>VS Code
-          </div>
-          <div class="skill-item mid">
-            <div class="skill-icon"><img src="assets/tools_and_editors/Zed_Editor_Logo.png" alt="Zed"></div>Zed Editor
+          <div class="skill-item">
+            <img src="assets/icons/javascript.svg" alt="JavaScript">
+            <span>JavaScript</span>
           </div>
         </div>
       </div>
 
-      <!-- Systems & Cloud -->
-      <div class="skill-group">
-        <div class="skill-group-name">Systems & Cloud</div>
-        <div class="skill-list">
-          <div class="skill-item strong">
-            <div class="skill-icon"><img src="assets/cloud_and_platforms/linux.png" alt="Linux"></div>Linux
+      <div class="skill-card">
+        <div class="skill-card-title">Tools & Platforms</div>
+        <div class="skill-card-items">
+          <div class="skill-item">
+            <img src="assets/icons/git.svg" alt="Git">
+            <span>Git</span>
           </div>
-          <div class="skill-item mid">
-            <div class="skill-icon"><img src="assets/cloud_and_platforms/azure-logo.svg" alt="Azure"></div>Azure (basics)
+          <div class="skill-item">
+            <img src="assets/icons/github.svg" alt="GitHub">
+            <span>GitHub</span>
           </div>
-          <div class="skill-item strong">
-            <div class="skill-icon skill-icon--text">MKF</div>Makefile
+          <div class="skill-item">
+            <img src="assets/icons/vscode.svg" alt="VS Code">
+            <span>VS Code</span>
           </div>
-          <div class="skill-item mid">
-            <div class="skill-icon skill-icon--text">CLI</div>CLI design
+          <div class="skill-item">
+            <img src="assets/icons/zed.svg" alt="Zed">
+            <span>Zed</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/icons/linux.svg" alt="Linux">
+            <span>Linux</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/icons/azure.svg" alt="Azure">
+            <span>Azure</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/icons/vercel.svg" alt="Vercel">
+            <span>Vercel</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/icons/netlify.svg" alt="Netlify">
+            <span>Netlify</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/icons/supabase.svg" alt="Supabase">
+            <span>Supabase</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/icons/brevo.svg" alt="Brevo">
+            <span>Brevo</span>
           </div>
         </div>
       </div>
 
-      <!-- CS Fundamentals -->
-      <div class="skill-group">
-        <div class="skill-group-name">CS Fundamentals</div>
-        <div class="skill-list">
-          <div class="skill-item strong"><div class="skill-dot"></div>Data Structures</div>
-          <div class="skill-item strong"><div class="skill-dot"></div>Algorithms</div>
-          <div class="skill-item strong"><div class="skill-dot"></div>File I/O & CRUD</div>
-          <div class="skill-item mid"><div class="skill-dot"></div>Networking basics</div>
-          <div class="skill-item mid"><div class="skill-dot"></div>Modular programming</div>
-          <div class="skill-item mid"><div class="skill-dot"></div>Memory & pointers</div>
+      <div class="skill-card">
+        <div class="skill-card-title">Fundamentals</div>
+        <div class="skill-card-items">
+          <div class="skill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="8" y1="8" x2="10" y2="16"/><line x1="16" y1="8" x2="14" y2="16"/><circle cx="12" cy="18" r="1.2" fill="currentColor"/></svg>
+            <span>Data Structures</span>
+          </div>
+          <div class="skill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 18 9 9 13 14 20 5"/><polyline points="15 5 20 5 20 10"/></svg>
+            <span>Algorithms</span>
+          </div>
+          <div class="skill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/></svg>
+            <span>File I/O & CRUD</span>
+          </div>
+          <div class="skill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="8" rx="1.5"/><rect x="3" y="13" width="18" height="8" rx="1.5"/><circle cx="7" cy="7" r=".8" fill="currentColor"/><circle cx="7" cy="17" r=".8" fill="currentColor"/></svg>
+            <span>Networking Basics</span>
+          </div>
+          <div class="skill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+            <span>Modular Programming</span>
+          </div>
+          <div class="skill-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="10" y1="4" x2="10" y2="20"/><line x1="14" y1="4" x2="14" y2="20"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+            <span>Memory & Pointers</span>
+          </div>
         </div>
       </div>
 
     </div>
-    <p class="skills-legend fade-in">
-      <span class="legend-strong">●</span> comfortable &nbsp;&nbsp;
-      <span class="legend-mid">●</span> familiar / learning
-    </p>
   </div>
 </section>
 

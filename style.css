@@ -675,6 +675,7 @@ h1.hero-name::after {
   overflow: hidden;
   transition: background .25s, border-color .25s, transform .25s, box-shadow .25s;
   box-shadow: var(--shadow-glass);
+  cursor: pointer;
 }
 /* Top shine */
 .project-card::after {
@@ -754,6 +755,28 @@ h1.hero-name::after {
 }
 .project-arrow { color: var(--text-3); font-size: 1.3rem; transition: all .25s; opacity: .4; align-self: flex-start; margin-top: .2rem; }
 
+.project-links { display: flex; gap: .5rem; margin-top: .75rem; }
+.project-link {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  padding: .35rem .85rem;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-3);
+  text-decoration: none;
+  letter-spacing: .03em;
+  transition: all .2s;
+  cursor: pointer;
+}
+.project-link:hover {
+  color: var(--accent-dim);
+  border-color: var(--border-accent);
+  box-shadow: var(--glow-accent-sm);
+}
+
 /* ══════════════════════════════════════
    GITHUB ACTIVITY
    ══════════════════════════════════════ */
@@ -799,7 +822,7 @@ h1.hero-name::after {
 }
 
 /* ══════════════════════════════════════
-   SKILLS — GLASS 4-COLUMN GRID
+   SKILLS — 3-CARD LAYOUT
    ══════════════════════════════════════ */
 
 #skills {
@@ -818,81 +841,100 @@ h1.hero-name::after {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--border);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
-.skill-group {
-  background: rgba(255,255,255,0.03);
+
+.skill-card {
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: 14px;
   padding: 2rem 1.75rem;
-  transition: background .2s;
+  box-shadow: var(--shadow-glass);
+  transition: background .3s, border-color .3s, transform .3s, box-shadow .3s;
   position: relative;
+  overflow: hidden;
 }
-.skill-group::before {
+.skill-card::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent);
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
 }
-.skill-group:hover { background: rgba(255,255,255,0.05); }
+.skill-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-accent);
+}
 
-.skill-group-name {
+.skill-card-title {
   font-family: var(--font-mono);
-  font-size: .72rem;
+  font-size: .78rem;
   color: var(--accent-dim);
-  letter-spacing: .1em;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  padding-bottom: .75rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  padding-bottom: .65rem;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.skill-list { display: flex; flex-direction: column; gap: .9rem; }
+
+.skill-card-items {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
 .skill-item {
   display: flex;
   align-items: center;
   gap: .75rem;
-  font-size: .9rem;
-  color: var(--text-2);
-  transition: color .2s, transform .2s;
+  padding: .25rem 0;
+  transition: transform .3s;
   cursor: default;
 }
-.skill-item:hover { color: var(--text); transform: translateX(4px); }
-.skill-icon {
-  width: 26px; height: 26px;
-  flex-shrink: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border);
-  transition: transform .2s, box-shadow .2s;
+.skill-item:hover {
+  transform: translateX(3px);
 }
-.skill-item:hover .skill-icon {
-  transform: scale(1.15);
-  box-shadow: 0 2px 12px rgba(200,255,0,0.15);
-}
-.skill-icon img { width: 18px; height: 18px; object-fit: contain; display: block; }
-.skill-icon--text {
-  font-family: var(--font-mono);
-  font-size: .5rem;
-  color: var(--text-3);
-  letter-spacing: .04em;
-}
-.skill-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.15); flex-shrink: 0; }
-.skill-item.strong .skill-dot { background: var(--accent); box-shadow: 0 0 4px var(--accent); }
-.skill-item.mid    .skill-dot { background: var(--text-3); }
-.skills-legend { font-family: var(--font-mono); font-size: .72rem; color: var(--text-3); margin-top: 1rem; letter-spacing: .03em; }
-.legend-strong { color: var(--accent); }
-.legend-mid    { color: var(--text-3); }
 
+.skill-item img,
+.skill-item svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: block;
+  transition: filter .3s, transform .3s, color .3s;
+}
+.skill-item svg {
+  color: var(--accent-dim);
+}
+.skill-item img {
+  filter: drop-shadow(0 0 3px rgba(200,255,0,0.08));
+}
+.skill-item:hover img {
+  filter: drop-shadow(0 0 8px rgba(200,255,0,0.2)) brightness(1.2);
+  transform: scale(1.06);
+}
+.skill-item:hover svg {
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px rgba(200,255,0,0.2));
+  transform: scale(1.06);
+}
+
+.skill-item span {
+  font-size: .875rem;
+  color: var(--text-2);
+  font-weight: 500;
+  letter-spacing: .01em;
+  transition: color .3s;
+}
+.skill-item:hover span {
+  color: var(--text);
+}
 /* ══════════════════════════════════════
    JOURNEY — TIMELINE
    ══════════════════════════════════════ */
@@ -1138,7 +1180,7 @@ footer a:hover { color: var(--text-2); }
   }
   .hero-terminal { margin-bottom: 0; }
   #hero { padding-bottom: 4rem; }
-  .skills-grid { grid-template-columns: 1fr; border-radius: 12px; }
+  .skills-grid { grid-template-columns: 1fr; }
   .about-sidebar { flex-direction: row; flex-wrap: wrap; }
   .about-stat { flex: 1; min-width: 140px; }
   #contact .contact-inner { padding: 2rem 1.25rem; }
