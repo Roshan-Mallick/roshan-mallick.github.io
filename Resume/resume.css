@@ -418,4 +418,21 @@
     .r-project-top { flex-direction: column; gap: 0.4rem; }
     .r-skills-table { grid-template-columns: 110px 1fr; }
     .r-name { font-size: 1.75rem; }
+    .download-btn { padding: 8px 14px; gap: 6px; }
+    .r-project { padding: 1rem 1.1rem; }
+    .r-contact { gap: 0.3rem 0.75rem; }
+  }
+
+  @media (max-width: 420px) {
+    .topbar { flex-wrap: wrap; height: auto; padding: 8px 0.75rem; row-gap: 0; }
+    .topbar-left { gap: 0.4rem; }
+    .back-link { font-size: 0.65rem; }
+    .topbar-title { font-size: 0.65rem; }
+    .download-btn { padding: 6px 10px; font-size: 0.65rem; gap: 4px; }
+    .r-project-link { white-space: normal; overflow-wrap: break-word; }
+    .r-skills-table { grid-template-columns: minmax(85px, auto) 1fr; }
+    .r-project { padding: 0.85rem 0.9rem; }
+    .r-name { font-size: 1.4rem; }
+    .r-edu-title { font-size: 0.9rem; }
+    .r-summary { font-size: 0.85rem; }
   }

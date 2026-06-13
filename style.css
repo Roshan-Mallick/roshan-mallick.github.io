@@ -442,6 +442,7 @@ h1.hero-name::after {
   font-family: var(--font-mono);
   font-size: .8rem;
   line-height: 1.9;
+  text-align: left;
   position: relative;
   z-index: 1;
 }
@@ -812,6 +813,7 @@ h1.hero-name::after {
   border-radius: 12px;
   padding: 2rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .github-graph-img {
   width: 100%;
@@ -1179,6 +1181,7 @@ footer a:hover { color: var(--text-2); }
     gap: 2rem;
   }
   .hero-terminal { margin-bottom: 0; }
+  .terminal-body { padding: 1.25rem 1rem 1.5rem; }
   #hero { padding-bottom: 4rem; }
   .skills-grid { grid-template-columns: 1fr; }
   .about-sidebar { flex-direction: row; flex-wrap: wrap; }
@@ -1189,5 +1192,6 @@ footer a:hover { color: var(--text-2); }
   .hero-scroll { display: none; }
   #github-activity { padding: 5rem 0; }
   .github-head { flex-direction: column; gap: 1rem; }
-  .github-graph { padding: 1rem; }
+  .github-graph { padding: 1rem; overflow-x: hidden; }
+  .github-graph-img { min-width: unset; }
 }
