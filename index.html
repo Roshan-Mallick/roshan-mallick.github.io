@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roshan Mallick |  Programmer & Open Source Learner</title>
+<title>Roshan Mallick | Programmer & Open Source Learner</title>
 
 <meta name="description" content="Portfolio of Roshan Mallick featuring C programming, Linux systems programming, cybersecurity research, backend engineering, and CLI tools.">
 
@@ -18,13 +18,16 @@
 <meta property="og:description" content="C programming, Linux systems programming, cybersecurity research, backend engineering, and CLI tools.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://roshan-mallick.github.io/">
-<meta property="og:image" content="https://roshan-mallick.github.io/assets/roshan-mallick-profile.png">
-
+<meta property="og:image" content="https://roshan-mallick.github.io/assets/og-card.svg">
+<meta property="og:site_name" content="Roshan Mallick">
+<meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Roshan Mallick">
 <meta name="twitter:description" content="Systems programmer, Linux enthusiast, and security researcher.">
-<meta name="twitter:image" content="https://roshan-mallick.github.io/assets/roshan-mallick-profile.png">
+<meta name="twitter:image" content="https://roshan-mallick.github.io/assets/og-card.svg">
+<meta name="twitter:site" content="@_eth0x1">
+<meta name="theme-color" content="#080808">
 
 <link rel="canonical" href="https://roshan-mallick.github.io/">
 <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
@@ -40,13 +43,96 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Roshan Mallick",
-  "url": "https://roshan-mallick.github.io/",
-  "sameAs": [
-    "https://github.com/Roshan-Mallick"
-  ],
-  "jobTitle": "Programmer"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://roshan-mallick.github.io/#website",
+      "url": "https://roshan-mallick.github.io/",
+      "name": "Roshan Mallick",
+      "description": "Portfolio of Roshan Mallick — C programming, Linux systems programming, cybersecurity research, backend engineering, and CLI tools.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://roshan-mallick.github.io/#person",
+      "name": "Roshan Mallick",
+      "url": "https://roshan-mallick.github.io/",
+      "image": "https://roshan-mallick.github.io/assets/roshan-mallick-profile.png",
+      "description": "BTech Computer Science student at Techno India University, passionate about C programming, Linux systems, cybersecurity research, and open source. Building CLI tools and web projects.",
+      "jobTitle": ["Programmer", "Computer Science Student"],
+      "knowsAbout": ["C programming", "Linux", "Systems Programming", "JavaScript", "Cybersecurity", "CLI Tools", "Web Development", "Data Structures", "Algorithms"],
+      "knowsLanguage": ["C", "JavaScript", "HTML", "CSS", "Bash"],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Techno India University"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "addressCountry": "India"
+      },
+      "award": "Cloud Study Jams 2025 — Top 25 Performer",
+      "sameAs": [
+        "https://github.com/Roshan-Mallick",
+        "https://linkedin.com/in/roshan-mallick-2b816a2b8",
+        "https://x.com/_eth0x1",
+        "https://medium.com/@roshanmallick2025"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://roshan-mallick.github.io/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://roshan-mallick.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resume",
+          "item": "https://roshan-mallick.github.io/Resume/"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://roshan-mallick.github.io/#project-quickcheck",
+      "name": "QuickCheck",
+      "description": "A full-stack SaaS platform that helps engineering teams manage deployments, incident response workflows, and operational runbooks through persistent, trackable checklists.",
+      "url": "https://quickcheck-web.vercel.app/",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "author": {
+        "@id": "https://roshan-mallick.github.io/#person"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://roshan-mallick.github.io/#project-rentdb",
+      "name": "RentDB",
+      "description": "A CLI rent management system built in C. Manages payment entries, exports to CSV, and auto-syncs with Google Drive on Linux.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux",
+      "author": {
+        "@id": "https://roshan-mallick.github.io/#person"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://roshan-mallick.github.io/#project-hashvault",
+      "name": "HashVault",
+      "description": "A password hashing tool in C implementing a 256-bit hex digest with bitwise XOR, ASCII conversion, and prime seeding. No external dependencies.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Linux",
+      "author": {
+        "@id": "https://roshan-mallick.github.io/#person"
+      }
+    }
+  ]
 }
 </script>
 
@@ -84,6 +170,8 @@
   </ul>
   <a href="Resume/index.html" target="_blank" class="nav-cta">RESUME ↗</a>
 </nav>
+
+<main>
 
 <!-- ═══ HERO — SPLIT LAYOUT ═══ -->
 <section id="hero">
@@ -151,13 +239,14 @@
         <p>When I'm not at a terminal, I'm reading tech blogs, working through DSA problems in C,
           or building something to scratch an itch I actually have. Based in Kolkata, West Bengal —
           learning out loud, one commit at a time.</p>
+        <blockquote class="pull-quote">Learning out loud, one commit at a time.</blockquote>
         <div class="about-interests">
           <span class="tag">open source</span>
           <span class="tag">public learning</span>
-          <span class="tag">linux</span>
+          <span class="tag"><a href="https://en.wikipedia.org/wiki/Linux" target="_blank" rel="external" class="tag-link">linux</a></span>
           <span class="tag">CLI tools</span>
           <span class="tag">GSoC</span>
-          <span class="tag">C programming</span>
+          <span class="tag"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="external" class="tag-link">C programming</a></span>
         </div>
       </div>
 
@@ -197,7 +286,7 @@
           <div class="project-status live">live</div>
         </div>
         <div class="project-body">
-          <div class="project-title">QuickCheck — Persistent Checklists for Engineering Teams</div>
+          <h3 class="project-title">QuickCheck — Persistent Checklists for Engineering Teams</h3>
           <p class="project-desc">A full-stack SaaS platform that helps engineering teams manage deployments, incident response workflows, and operational runbooks through persistent, trackable checklists.</p>
           <div class="project-highlights">
             <span class="highlight">Auth & user mgmt</span>
@@ -228,7 +317,7 @@
           <div class="project-status live">live</div>
         </div>
         <div class="project-body">
-          <div class="project-title">RentDB — CLI Rent Management System</div>
+          <h3 class="project-title">RentDB — CLI Rent Management System</h3>
           <p class="project-desc">A CLI tool built in C to manage rent payment entries and export them into a properly organized CSV. Came out of a real frustration — doing the same Excel work every month was slow. Added Google Drive auto-sync on Linux so data never gets lost.</p>
           <div class="project-highlights">
             <span class="highlight">CRUD operations</span>
@@ -253,7 +342,7 @@
             <div class="project-status live">live</div>
           </div>
                   <div class="project-body">
-               <div class="project-title">HashVault — Password Hashing in C</div>
+               <h3 class="project-title">HashVault — Password Hashing in C</h3>
            <p class="project-desc">A beginner-friendly password hashing project in C. Implements a 256-bit hex digest using 4 independent 64-bit states with bitwise XOR, ASCII conversion, and prime seeding. Includes Hash Explorer, Avalanche Tester, Register and Login modes — no external libraries.</p>
        <div class="project-highlights">
       <span class="highlight">256-bit hash</span>
@@ -291,6 +380,7 @@
       <img
         src="https://github-readme-streak-stats.herokuapp.com?user=Roshan-Mallick&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=222222&ring=c8ff00&fire=c8ff00&currStreakLabel=c8ff00"
         alt="GitHub streak stats"
+        loading="lazy"
         class="github-streak-card"
       />
     </div>
@@ -298,6 +388,7 @@
       <img
         src="https://ghchart.rshah.org/c8ff00/Roshan-Mallick"
         alt="GitHub contribution graph"
+        loading="lazy"
         class="github-graph-img"
       />
     </div>
@@ -315,7 +406,7 @@
     <div class="skills-grid fade-in">
 
       <div class="skill-card">
-        <div class="skill-card-title">Languages</div>
+        <h3 class="skill-card-title">Languages</h3>
         <div class="skill-card-items">
           <div class="skill-item">
             <img src="assets/icons/c.svg" alt="C">
@@ -337,7 +428,7 @@
       </div>
 
       <div class="skill-card">
-        <div class="skill-card-title">Tools & Platforms</div>
+        <h3 class="skill-card-title">Tools & Platforms</h3>
         <div class="skill-card-items">
           <div class="skill-item">
             <img src="assets/icons/git.svg" alt="Git">
@@ -383,7 +474,7 @@
       </div>
 
       <div class="skill-card">
-        <div class="skill-card-title">Fundamentals</div>
+        <h3 class="skill-card-title">Fundamentals</h3>
         <div class="skill-card-items">
           <div class="skill-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="8" y1="8" x2="10" y2="16"/><line x1="16" y1="8" x2="14" y2="16"/><circle cx="12" cy="18" r="1.2" fill="currentColor"/></svg>
@@ -429,7 +520,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2024</div>
-        <div class="timeline-title">Started CS — properly</div>
+        <h3 class="timeline-title">Started CS — properly</h3>
         <p class="timeline-desc">Enrolled in B.Tech CSE at Techno India University, West Bengal. C was the first language that made things click — memory, pointers, control flow.</p>
         <div class="timeline-tags">
           <span class="tag">C</span><span class="tag">fundamentals</span><span class="tag">data structures</span>
@@ -439,7 +530,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Early 2025</div>
-        <div class="timeline-title">Started learning in public</div>
+        <h3 class="timeline-title">Started learning in public</h3>
         <p class="timeline-desc">Stopped keeping everything local. Started documenting what I build, break, and learn on LinkedIn and X. Based in Kolkata, building in public from day one.</p>
         <div class="timeline-tags">
           <span class="tag">LinkedIn</span><span class="tag">X / Twitter</span><span class="tag">public learning</span><span class="tag">Kolkata</span>
@@ -449,7 +540,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Mid 2025</div>
-        <div class="timeline-title">Built RentDB — first real-world tool</div>
+        <h3 class="timeline-title">Built RentDB — first real-world tool</h3>
         <p class="timeline-desc">Built a CLI rent management system in C to solve an actual problem. Learned file handling, CSV export, Makefile builds, and Linux filesystem quirks the hard way.</p>
         <div class="timeline-tags">
           <span class="tag">C</span><span class="tag">Linux</span><span class="tag">CLI</span><span class="tag">Makefile</span>
@@ -459,7 +550,7 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Late 2025</div>
-        <div class="timeline-title">Found bug bounty & web security</div>
+        <h3 class="timeline-title">Found bug bounty & web security</h3>
         <p class="timeline-desc">Started reading HackerOne reports. Learned how web applications work before trying to break them. Switched to Caido for traffic interception and analysis.</p>
         <div class="timeline-tags">
           <span class="tag">web security</span><span class="tag">Caido</span><span class="tag">XSS</span><span class="tag">IDOR</span>
@@ -469,7 +560,7 @@
       <div class="timeline-item active">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Now</div>
-        <div class="timeline-title">Building in public, looking for what's next</div>
+        <h3 class="timeline-title">Building in public, looking for what's next</h3>
         <p class="timeline-desc">Learning JavaScript deeply, working through C DSA, exploring GSoC, and doing bug bounty research on the side. Open to internships, collaborations, or anything real.</p>
         <div class="timeline-tags">
           <span class="tag" style="border-color:rgba(200,255,0,.2);color:#8ab300">available</span>
@@ -533,6 +624,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <p>Built by Roshan Mallick · 2026 · <a href="https://github.com/Roshan-Mallick" target="_blank">Roshan-Mallick</a></p>

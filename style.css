@@ -1106,6 +1106,99 @@ footer a { color: var(--text-3); text-decoration: none; }
 footer a:hover { color: var(--text-2); }
 
 /* ══════════════════════════════════════
+   H3 HEADINGS (project, skill, timeline)
+   ══════════════════════════════════════ */
+
+h3.project-title {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -.02em;
+}
+h3.skill-card-title {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--accent-dim);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  padding-bottom: .65rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+h3.timeline-title {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -.02em;
+  margin-bottom: .4rem;
+}
+
+/* ══════════════════════════════════════
+   PULL QUOTE
+   ══════════════════════════════════════ */
+
+.pull-quote {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--accent-dim);
+  border-left: 2px solid var(--accent-dim);
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+  font-style: normal;
+  background: rgba(200,255,0,0.03);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ══════════════════════════════════════
+   TAG LINK (authoritative external)
+   ══════════════════════════════════════ */
+
+.tag-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s;
+}
+.tag-link:hover {
+  color: var(--accent-dim);
+}
+
+/* ══════════════════════════════════════
+   TL;DR BOX
+   ══════════════════════════════════════ */
+
+.tldr-box {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 1.25rem;
+  background: rgba(200,255,0,0.04);
+  border: 1px solid rgba(200,255,0,0.12);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+}
+.tldr-label {
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.tldr-text {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════
    FADE IN
    ══════════════════════════════════════ */
 

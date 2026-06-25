@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(200,255,0,0.12)"/>
+      <stop offset="100%" stop-color="rgba(200,255,0,0.03)"/>
+    </linearGradient>
+    <linearGradient id="accent-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8ff00"/>
+      <stop offset="100%" stop-color="#8ab300"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glow orbs -->
+  <circle cx="950" cy="315" r="350" fill="url(#glow)"/>
+  <circle cx="200" cy="500" r="200" fill="rgba(200,255,0,0.04)"/>
+
+  <!-- Top border accent -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accent-line)"/>
+
+  <!-- Name -->
+  <text x="80" y="270" font-family="'Helvetica Neue','Arial Black',sans-serif" font-size="100" font-weight="900" fill="#e8e8e4" letter-spacing="-4">Roshan</text>
+  <text x="80" y="370" font-family="'Helvetica Neue','Arial Black',sans-serif" font-size="100" font-weight="900" fill="rgba(255,255,255,0.2)" letter-spacing="-4">Mallick</text>
+
+  <!-- Accent underline -->
+  <rect x="80" y="410" width="140" height="4" rx="2" fill="url(#accent-line)"/>
+
+  <!-- Role -->
+  <text x="80" y="465" font-family="'Courier New',monospace" font-size="24" fill="#a0a09a" letter-spacing="2">CSE Student &amp; Developer</text>
+
+  <!-- Terminal card -->
+  <rect x="620" y="120" width="500" height="360" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="652" y="165" width="8" height="8" rx="4" fill="#ff5f57"/>
+  <rect x="672" y="165" width="8" height="8" rx="4" fill="#febc2e"/>
+  <rect x="692" y="165" width="8" height="8" rx="4" fill="#c8ff00"/>
+  <text x="720" y="174" font-family="'Courier New',monospace" font-size="14" fill="#5a5a56">portfolio — zsh</text>
+
+  <line x1="621" y1="195" x2="1119" y2="195" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <text x="660" y="240" font-family="'Courier New',monospace" font-size="17" fill="#c8ff00">$</text>
+  <text x="685" y="240" font-family="'Courier New',monospace" font-size="17" fill="#e8e8e4">whoami</text>
+
+  <text x="660" y="280" font-family="'Courier New',monospace" font-size="17" fill="#86efac">Roshan Mallick — CSE Student</text>
+
+  <text x="660" y="320" font-family="'Courier New',monospace" font-size="17" fill="#c8ff00">$</text>
+  <text x="685" y="320" font-family="'Courier New',monospace" font-size="17" fill="#e8e8e4">skills</text>
+
+  <text x="660" y="360" font-family="'Courier New',monospace" font-size="17" fill="#a0a09a">C · JavaScript · Linux · Git</text>
+
+  <text x="660" y="400" font-family="'Courier New',monospace" font-size="17" fill="#c8ff00">$</text>
+  <text x="685" y="400" font-family="'Courier New',monospace" font-size="17" fill="#e8e8e4">status</text>
+
+  <text x="660" y="440" font-family="'Courier New',monospace" font-size="17" fill="#86efac">Available for opportunities</text>
+
+  <!-- Blinking cursor -->
+  <rect x="685" y="428" width="60" height="2" fill="#c8ff00">
+    <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- URL footer -->
+  <text x="80" y="570" font-family="'Courier New',monospace" font-size="15" fill="#5a5a56">roshan-mallick.github.io</text>
+</svg>
