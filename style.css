@@ -2,7 +2,6 @@
    ROSHAN MALLICK — GLASSMORPHISM REDESIGN
    ═══════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -338,8 +337,8 @@ h2.section-title {
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent); }
-  50%       { opacity: .3; box-shadow: none; }
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .3; }
 }
 
 h1.hero-name {
@@ -800,6 +799,7 @@ h1.hero-name::after {
 .github-stats-wrapper { margin-bottom: 2rem; }
 .github-streak-card {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -817,6 +817,7 @@ h1.hero-name::after {
 }
 .github-graph-img {
   width: 100%;
+  height: auto;
   min-width: 720px;
   display: block;
   opacity: .92;
@@ -1101,8 +1102,8 @@ footer {
   text-align: center;
   background: var(--bg);
 }
-footer p { font-family: var(--font-mono); font-size: .72rem; color: var(--text-3); letter-spacing: .04em; }
-footer a { color: var(--text-3); text-decoration: none; }
+footer p { font-family: var(--font-mono); font-size: .72rem; color: var(--text-2); letter-spacing: .04em; }
+footer a { color: var(--text-2); text-decoration: none; }
 footer a:hover { color: var(--text-2); }
 
 /* ══════════════════════════════════════
