@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://roshan-mallick.github.io/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://roshan-mallick.github.io/assets/og-card.svg</image:loc>
-      <image:title>Roshan Mallick — Social Card</image:title>
-    </image:image>
   </url>
 
   <url>
     <loc>https://roshan-mallick.github.io/Resume/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
