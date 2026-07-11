@@ -857,6 +857,7 @@ h1.hero-name::after {
   opacity: .92;
   filter: brightness(.72) contrast(1.18) saturate(1.25);
 }
+.terminal-body rect { rx: 3; }
 .terminal-footer {
   display: flex;
   justify-content: space-between;
