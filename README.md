@@ -96,6 +96,6 @@ View my resume online:
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the MIT License.
