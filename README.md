@@ -1,4 +1,4 @@
-# 🌐 Roshan Mallick Portfolio Website
+#  Roshan Mallick Portfolio Website
 
 This repository contains the source code for my personal portfolio website, hosted using GitHub Pages.
 
@@ -6,7 +6,7 @@ This repository contains the source code for my personal portfolio website, host
 
 ---
 
-## 📖 About
+##  About
 
 This portfolio serves as a central hub for showcasing my technical skills, projects, resume, and professional experience.
 
@@ -14,7 +14,7 @@ It is designed to provide recruiters, hiring managers, and fellow developers wit
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Responsive and modern user interface
 * Professional portfolio layout
@@ -27,7 +27,7 @@ It is designed to provide recruiters, hiring managers, and fellow developers wit
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * HTML5
 * CSS3
@@ -36,7 +36,7 @@ It is designed to provide recruiters, hiring managers, and fellow developers wit
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 .
@@ -72,7 +72,7 @@ Open `index.html` in your preferred web browser.
 
 ---
 
-## 🌍 Deployment
+##  Deployment
 
 This website is deployed using GitHub Pages.
 
@@ -80,7 +80,7 @@ Any changes pushed to the `main` branch are automatically published after the Gi
 
 ---
 
-## 📄 Resume
+##  Resume
 
 View my resume online:
 
@@ -88,7 +88,7 @@ View my resume online:
 
 ---
 
-## 🤝 Connect With Me
+##  Connect With Me
 
 * Portfolio: https://roshan-mallick.github.io/
 * GitHub: https://github.com/Roshan-Mallick
