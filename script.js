@@ -1,1 +1,61 @@
 const nav=document.getElementById("nav");window.addEventListener("scroll",()=>{nav.classList.toggle("scrolled",window.scrollY>40)},{passive:!0});const progressBar=document.getElementById("scroll-progress-bar");window.addEventListener("scroll",()=>{const e=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,n=t>0?e/t*100:0;progressBar.style.height=n+"%"},{passive:!0}),window.addEventListener("scroll",()=>{window.scrollY>.6*window.innerHeight?document.body.classList.add("sidebar-visible"):document.body.classList.remove("sidebar-visible")},{passive:!0});const sections=document.querySelectorAll("section[id]"),navLinks=document.querySelectorAll(".nav-links a"),secLinks=document.querySelectorAll(".sec-link"),sectionObserver=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){const t=e.target.getAttribute("id");navLinks.forEach(e=>{e.classList.toggle("active",e.getAttribute("href")===`#${t}`)}),secLinks.forEach(e=>{e.classList.toggle("active",e.dataset.section===t)})}})},{threshold:.35});sections.forEach(e=>{sectionObserver.observe(e)});const fadeObserver=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("visible"),fadeObserver.unobserve(e.target))})},{threshold:.08,rootMargin:"0px 0px -60px 0px"});document.querySelectorAll(".fade-in").forEach(e=>fadeObserver.observe(e)),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",t=>{const n=document.querySelector(e.getAttribute("href"));n&&(t.preventDefault(),n.scrollIntoView({behavior:"smooth"}))})}),function(){const e=document.getElementById("terminal-output");if(!e)return;const t=["#include <stdio.h>","","typedef struct {","    char *name;","    char *role;","    char *location;","    int projects;","    int available;","} Developer;","void status(Developer *d) {","    if (d->available)",'        printf("%s · %s\\n", d->name, d->role);',"}","","int main() {","    Developer dev = {",'        "Roshan Mallick",','        "CSE Student",','        "Kolkata, IN",',"        12, 1","    };",'    char *skills[] = {"C", "JavaScript",','                      "Linux", "Git"};',"    status(&dev);","    return 0;","}"];function n(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}function s(e){const t=[];let s=0;for(;s<e.length;){if("/"===e[s]&&"/"===e[s+1]){t.push('<span class="t-comment">'+n(e.slice(s))+"</span>");break}if('"'===e[s]){let r=s+1;for(;r<e.length&&'"'!==e[r];)r++;r<e.length&&r++,t.push('<span class="t-string">'+n(e.slice(s,r))+"</span>"),s=r;continue}const r=e.slice(s).match(/^[A-Za-z_]\w*/);if(r){({typedef:1,struct:1,return:1,int:1,char:1,main:1,if:1,void:1,for:1})[r[0]]?t.push('<span class="t-keyword">'+r[0]+"</span>"):t.push(n(r[0])),s+=r[0].length;continue}if(/[0-9]/.test(e[s])){let n=e[s];for(s++;s<e.length&&/[0-9]/.test(e[s]);)n+=e[s++];t.push('<span class="t-fn">'+n+"</span>");continue}const o=e[s];" "===o?t.push("&nbsp;"):t.push(n(o)),s++}return t.join("")}function r(e,t,n,r){let o="";for(let e=0;e<t.length;e++){const i=t[e];if(e===n&&r>=0){const e=i.slice(0,r),t=i.slice(r);o+="<div>"+s(e)+'<span class="terminal-cursor"></span>'+s(t)+"</div>"}else o+="<div>"+s(i)+"</div>"}e.innerHTML=o}function o(e){return new Promise(t=>setTimeout(t,e))}window.matchMedia("(prefers-reduced-motion: reduce)").matches?r(e,t,-1,-1):async function(){e.innerHTML="";const n=[];for(let s=0;s<t.length;s++){const i=t[s];n.push("");for(let t=0;t<=i.length;t++){n[s]=i.slice(0,t),r(e,n,s,t);const c=i[t-1]||"";let l=5+5*Math.random();"{});".includes(c)&&(l+=20),t===i.length&&(r(e,n,-1,-1),l=30),await o(l)}n[s]=i}r(e,t,-1,-1)}()}();
+// ── CONTACT FORM → CLOUDFLARE WORKER → TELEGRAM ──
+(function () {
+  var WORKER_URL = 'https://portfolio-contact.roshanmallick2025.workers.dev';
+
+  var form   = document.getElementById('contact-form');
+  var btn    = document.getElementById('cf-submit');
+  var status = document.getElementById('cf-status');
+
+  if (!form) return;
+
+  function setStatus(msg, type) {
+    status.textContent = msg;
+    status.className   = 'cf-status ' + (type || '');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var name    = form.querySelector('#cf-name').value.trim();
+    var email   = form.querySelector('#cf-email').value.trim();
+    var phoneEl = form.querySelector('#cf-phone');
+    var phone   = phoneEl ? phoneEl.value.trim() : '';
+    var service = form.querySelector('#cf-subject').value.trim();
+    var message = form.querySelector('#cf-message').value.trim();
+
+    if (!name || !email || !service || !message) {
+      setStatus('Please fill in all fields.', 'err');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus('Enter a valid email address.', 'err');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.querySelector('.cf-btn-text').textContent = 'Sending\u2026';
+    setStatus('');
+
+    fetch(WORKER_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ name: name, email: email, phone: phone, service: service, message: message })
+    })
+    .then(function (res) {
+      if (res.ok) {
+        setStatus('Message sent \u2014 I\'ll get back to you soon.', 'ok');
+        form.reset();
+      } else {
+        setStatus('Something went wrong (' + res.status + '). Try emailing me directly.', 'err');
+      }
+    })
+    .catch(function () {
+      setStatus('Network error \u2014 check your connection and try again.', 'err');
+    })
+    .finally(function () {
+      btn.disabled = false;
+      btn.querySelector('.cf-btn-text').textContent = 'Send message';
+    });
+  });
+})();
