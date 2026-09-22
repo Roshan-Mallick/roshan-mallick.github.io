@@ -916,7 +916,7 @@ h1.hero-name::after {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
@@ -962,6 +962,16 @@ h1.hero-name::after {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+#skills .container {
+  max-width: 1580px;
+}
+
+.skills-grid .skill-card:last-child {
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-item {
